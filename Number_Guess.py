@@ -1,8 +1,24 @@
-a = 2
-b = 4
-c = a + b
-print(c)
+
+# Number guessing game :-
 
 
-for i in range(0,5):
-    print(i)
+import random
+
+storednum = random.randint(1,100)
+
+print("Number guessing game --:--\n")
+
+askguess = int(input("Enter Your guess :"))
+
+while storednum != askguess:
+   
+    if askguess > storednum:
+        print("Guess high!")
+
+    elif askguess < storednum:
+        print("Guess low!")
+
+    askguess = int(input("Enter guess again: "))
+
+else:
+  print("You guessed correct and won the game !") 
