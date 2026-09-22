@@ -6,6 +6,8 @@ import random
 
 storednum = random.randint(1,100)
 
+guesses = 1
+
 print("Number guessing game --:--\n")
 
 askguess = int(input("Enter Your guess :"))
@@ -19,6 +21,9 @@ while storednum != askguess:
         print("Guess low!")
 
     askguess = int(input("Enter guess again: "))
+    guesses += 1
 
 else:
-  print("You guessed correct and won the game !") 
+  print("You won the game !!") 
+  print("Number fo guesses are :", guesses) 
+
