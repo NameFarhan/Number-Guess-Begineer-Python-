@@ -4,14 +4,14 @@
 
 import random
 
-storednum = random.randint(1,100)
+storednum = random.randint(0,100)
 
 guesses = 1
 attempts = 10
 print("Number guessing game --:--\n")
 print(storednum)
 
-askguess = int(input("Enter Your guess :"))
+askguess = int(input("Enter guess again: "))
 
 while askguess != storednum:
 
@@ -19,7 +19,6 @@ while askguess != storednum:
         print("Please enter the number between 0 and 100")
         attempts += 1
         guesses -= 1
-
     elif askguess > storednum:
         print("Guess high!")
 
