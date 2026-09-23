@@ -7,8 +7,9 @@ import random
 storednum = random.randint(1,100)
 
 guesses = 1
-attempts = guesses
+attempts = 10
 print("Number guessing game --:--\n")
+print(storednum)
 
 askguess = int(input("Enter Your guess :"))
 
@@ -20,14 +21,14 @@ while askguess != storednum:
     elif askguess < storednum:
         print("Guess low!")
 
+    attempts -= 1
+    print("remaining attempts are: ", attempts)
     askguess = int(input("Enter guess again: "))
     guesses += 1
-    attempts -= 1
     if guesses == 10:
         print("Game Over! Attempts Finished")
+        print("The secret number is:" ,storednum)
         break
-    elif guesses == 7:
-        print("3 attempts remaining!")
 
 
 
