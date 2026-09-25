@@ -10,14 +10,19 @@ guesses = 1
 attempts = 10
 print("Number guessing game --:--\n")
 print(storednum)
+valid = False
 
-try:
-    askguess = int(input("Enter your guess: "))
-except ValueError:
-    print("Please enter a valid number!")
+while valid == False:
+    try:
+        askguess = int(input("Enter your guess: "))
+        valid = True
+    except ValueError:
+        print("Please enter a valid number!")
+        valid = False
 
-while askguess != storednum:
 
+while askguess != storednum:    
+    
     if askguess > 100 or askguess < 0:
         print("Please enter the number between 0 and 100!")
         attempts += 1
