@@ -27,6 +27,7 @@ while askguess != storednum:
         print("Please enter the number between 0 and 100!")
         attempts += 1
         guesses -= 1
+        
     elif askguess > storednum:
         print("Guess high!")
 
@@ -36,12 +37,18 @@ while askguess != storednum:
     attempts -= 1
     guesses += 1
     print("remaining attempts are: ", attempts)
-    try:
-        askguess = int(input("Enter your guess: "))
-    except ValueError:
-        print("Please enter a valid number!")   
-        attempts += 1
-        guesses -= 1
+    insidevalid = False
+
+    while insidevalid == False:
+        try:
+             askguess = int(input("Enter your guess: "))
+             insidevalid = True
+        except ValueError:
+            print("Please enter a valid number!") 
+            insidevalid = False
+            print("remaining attempts are: ", attempts)
+            
+
      
     if guesses == 10:
         print("Game Over! Attempts Finished")
