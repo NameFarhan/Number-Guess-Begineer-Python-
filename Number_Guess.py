@@ -4,12 +4,24 @@
 
 import random
 
+foreasy = "Easy"
+formedium = "Medium"
+forhard = "Hard"
+
+print(foreasy)
+print(formedium)
+print(forhard)
+
+difficulty = input("Enter the diffculty :-")
+
 storednum = random.randint(1,100)
 
+
+print("Number guessing game --:--\n")
+
+print(storednum)
 guesses = 1
 attempts = 10
-print("Number guessing game --:--\n")
-print(storednum)
 valid = False
 
 while valid == False:
