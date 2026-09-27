@@ -4,27 +4,27 @@
 
 import random
 
-foreasy = "Easy"
-formedium = "Medium"
-forhard = "Hard"
+print("Easy")
+print("Medium")
+print("Hard")
 
-print(foreasy)
-print(formedium)
-print(forhard)
-
-difficulty = input("Enter the diffculty :-")
-
-storednum = random.randint(1,100)
+difficulty = input("Enter the diffculty :-").lower()
 
 
-print("Number guessing game --:--\n")
+def my_function(difficulty):
 
-print(storednum)
-guesses = 1
-attempts = 10
-valid = False
+ 
+ storednum = random.randint(1,100)
 
-while valid == False:
+
+ print("Number guessing game --:--\n")
+
+ print(storednum)
+ guesses = 1
+ attempts = 10
+ valid = False
+
+ while valid == False:
     try:
         askguess = int(input("Enter your guess: "))
         valid = True
@@ -33,7 +33,7 @@ while valid == False:
         valid = False
 
 
-while askguess != storednum:    
+ while askguess != storednum:    
     
     if askguess > 100 or askguess < 0:
         print("Please enter the number between 0 and 100!")
@@ -69,7 +69,7 @@ while askguess != storednum:
 
 
 
-else:
+ else:
   print("You won the game !!") 
   print("Number of guesses are :", guesses) 
 
