@@ -7,7 +7,7 @@ print("Easy")
 print("Medium")
 print("Hard")
 
-difficulty = str(input("Enter the diffculty :-")).lower()
+difficulty = input("Enter the diffculty :-").lower()
 
 
 def my_function(difficulty):
@@ -42,10 +42,11 @@ def my_function(difficulty):
             askguess = int(input(f"Enter your guess between 1 to {max_num}: "))
             if difficulty == "easy":
                 if askguess > 50:
-                    print(f"Sorry number above {max_num}")
+                 print(f"Sorry number above {max_num}")
+                 continue
                 elif askguess < 1:
-                    print("sorry num lesser than 1")
-            continue
+                 print("sorry num lesser than 1")
+                 continue   
             valid = True
         except ValueError:
             print("Please enter a valid number!")
@@ -74,9 +75,10 @@ def my_function(difficulty):
                 if difficulty == "easy":
                     if askguess > 50:
                      print(f"Sorry number above {max_num}")
+                     continue
                     elif askguess < 1:
                      print("sorry num lesser than 1")
-                continue
+                     continue
                 insidevalid = True
             except ValueError:
                 print("Please enter a valid number!")
