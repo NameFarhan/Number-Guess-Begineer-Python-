@@ -7,8 +7,14 @@ print("Easy")
 print("Medium")
 print("Hard")
 
-difficulty = input("Enter the diffculty :-").lower()
-
+difficulty_valid = True
+while difficulty_valid == True:
+   difficulty = input("Enter the diffculty :-").lower()
+   if difficulty == "easy" or difficulty == "medium" or difficulty == "hard":
+    difficulty_valid = False
+   else:
+      print("Please enter from the above !")
+      continue
 
 def my_function(difficulty):
 
@@ -24,7 +30,6 @@ def my_function(difficulty):
     storednum = random.randint(1, max_num)
     print("Number guessing game --:--\n")
 
-    print(storednum)
     guesses = 1
     if difficulty == "easy":
         selective_attempts = 10
@@ -35,8 +40,9 @@ def my_function(difficulty):
     elif difficulty == "hard":
         selective_attempts = 8
     attempts = selective_attempts
-    valid = False
 
+
+    valid = False
     while valid == False:
         try:
             askguess = int(input(f"Enter your guess between 1 to {max_num}: "))
