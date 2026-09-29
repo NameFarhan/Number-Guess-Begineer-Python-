@@ -97,23 +97,23 @@ def my_function(difficulty):
                     elif askguess < 1:
                         print("sorry num lesser than 1")
                         continue
-                        insidevalid = True
-                    elif difficulty == "medium":
-                        if askguess > 100:
-                            print(f"Sorry number above {max_num}")
-                            continue
-                        elif askguess < 1:
-                            print("sorry number lesser than 1")
-                            continue
-                        insidevalid = True
-                    elif difficulty == "hard":
-                        if askguess > 500:
-                            print(f"Sorry number above {max_num}")
-                            continue
-                        elif askguess < 1:
-                            print("sorry number lesser than 1")
-                            continue
-                        insidevalid = True
+                    insidevalid = True
+                elif difficulty == "medium":
+                    if askguess > 100:
+                        print(f"Sorry number above {max_num}")
+                        continue
+                    elif askguess < 1:
+                        print("sorry num lesser than 1")
+                        continue
+                    insidevalid = True
+                elif difficulty == "hard":
+                    if askguess > 500:
+                        print(f"Sorry number above {max_num}")
+                        continue
+                    elif askguess < 1:
+                        print("sorry num lesser than 1")
+                        continue
+                    insidevalid = True
             except ValueError:
                 print("Please enter a valid number!")
                 insidevalid = False
