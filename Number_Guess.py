@@ -152,3 +152,5 @@ def my_function(difficulty):
 
 
 my_function(difficulty=difficulty)
+
+print("abc")
