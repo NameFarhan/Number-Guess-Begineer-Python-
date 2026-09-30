@@ -76,7 +76,30 @@ def my_function(difficulty):
             valid = False
     while askguess != storednum:
 
-        if askguess > storednum:
+        if difficulty == "easy":
+         hot_message = storednum - 5
+         warm_message = storednum - 10
+         cold_message = storednum - 15
+         
+        elif difficulty == "medium":
+         hot_message = storednum - 10
+         warm_message = storednum - 15
+         cold_message = storednum - 20
+
+        elif difficulty == "hard":
+         hot_message = storednum - 30
+         warm_message = storednum - 50
+         cold_message = storednum - 100
+
+
+        if askguess < hot_message:
+            print("You are hot !")
+        elif askguess < warm_message:
+            print("You are warm !")
+        elif askguess < cold_message:
+            print("You are so cold !")
+
+        elif askguess > storednum:
             print("Guess high!")
 
         elif askguess < storednum:
@@ -123,13 +146,9 @@ def my_function(difficulty):
             print("Game Over! Attempts Finished")
             print("The secret number is:", storednum)
             break
-
     else:
         print("You won the game !!")
         print("Number of guesses are :", guesses)
-
-
-        
 
 
 my_function(difficulty=difficulty)
