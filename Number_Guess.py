@@ -76,30 +76,7 @@ def my_function(difficulty):
             valid = False
     while askguess != storednum:
 
-        if difficulty == "easy":
-         hot_message = storednum - 5
-         warm_message = storednum - 10
-         cold_message = storednum - 15
-         
-        elif difficulty == "medium":
-         hot_message = storednum - 10
-         warm_message = storednum - 15
-         cold_message = storednum - 20
-
-        elif difficulty == "hard":
-         hot_message = storednum - 30
-         warm_message = storednum - 50
-         cold_message = storednum - 100
-
-
-        if askguess < hot_message:
-            print("You are hot !")
-        elif askguess < warm_message:
-            print("You are warm !")
-        elif askguess < cold_message:
-            print("You are so cold !")
-
-        elif askguess > storednum:
+        if askguess > storednum:
             print("Guess high!")
 
         elif askguess < storednum:
@@ -146,37 +123,21 @@ def my_function(difficulty):
             print("Game Over! Attempts Finished")
             print("The secret number is:", storednum)
             break
+        elif attempts < 5:
+            if difficulty == "easy":
+                if storednum > 0 and storednum < 10:
+                    print("The number is between 0 and 10 !!")
+                elif storednum > 10 and storednum < 20:
+                    print("The number is between 10 and 20 !!")
+                elif storednum > 20 and storednum < 30:
+                    print("The number is between 20 and 30 !!")
+                elif storednum > 30 and storednum < 40:
+                    print("The number is between 30 and 40 !!")
+                if storednum > 40 and storednum < 50:
+                    print("The number is between 40 and 50 !!")
     else:
         print("You won the game !!")
         print("Number of guesses are :", guesses)
 
 
 my_function(difficulty=difficulty)
-
-a = 2
-b = 3
-c = a + b
-
-print(c)
-
-a = 2
-b = 3
-c = a + b
-
-print(c)
-
-a = 2
-b = 3
-c = a + b
-
-print(c)
-a = 2
-b = 3
-c = a + b
-
-print(c)
-a = 2
-b = 3
-c = a + b
-
-print(c)
