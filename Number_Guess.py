@@ -123,29 +123,6 @@ def my_function(difficulty):
             print("Game Over! Attempts Finished")
             print("The secret number is:", storednum)
             break
-        elif attempts < 6:
-            if difficulty == "easy":
-                if storednum > 0 and storednum < 10:
-                    print("The number is between 0 and 10 !!")
-                elif storednum > 10 and storednum < 20:
-                    print("The number is between 10 and 20 !!")
-                elif storednum > 20 and storednum < 30:
-                    print("The number is between 20 and 30 !!")
-                elif storednum > 30 and storednum < 40:
-                    print("The number is between 30 and 40 !!")
-                elif storednum > 40 and storednum < 50:
-                    print("The number is between 40 and 50 !!")
-
-                if askguess < 0 or askguess > 10:
-                    print("You are going out of the range !!")
-                elif askguess < 10 or askguess > 20:
-                        print("You are going out of the range !!")
-                elif askguess < 20 or askguess > 30:
-                    print("You are going out of the range !!")
-                elif askguess < 30 or askguess > 40:
-                    print("You are going out of the range !!")
-                elif askguess < 40 or askguess > 50:    
-                    print("You are going out of the range !!")
 
     else:
         print("You won the game !!")
