@@ -75,6 +75,12 @@ def my_function(difficulty):
             print("Please enter a valid number!")
             valid = False
     while askguess != storednum:
+        if difficulty == "easy":
+          cold_message = storednum - 20 or storednum + 20
+          warm_message = storednum - 10 or storednum + 10
+          hot_message = storednum - 5 or storednum + 5
+          
+
 
         if askguess > storednum:
             print("Guess high!")
