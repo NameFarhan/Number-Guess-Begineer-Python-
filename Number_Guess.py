@@ -94,11 +94,17 @@ def my_function(difficulty):
             print("you are warm !")
         elif difference <= selective_cold:
             print("you are cold !")
+        num1 = 0
+        num2 = max_num
+
         if askguess > storednum:
             print("Go Lower !")
+            num2 = askguess - 1
         else:
             print("Go higher !")
+            num1 = askguess + 1
 
+        print(f"Range is {num1} and {num2}")
         attempts -= 1
         guesses += 1
         print("remaining attempts are: ", attempts)
