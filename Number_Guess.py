@@ -1,6 +1,5 @@
 # Number guessing game :-
 
-
 import random
 
 print("Easy")
@@ -18,7 +17,6 @@ while difficulty_valid == True:
 
 
 def my_function(difficulty):
-
     if difficulty == "easy":
         max_num = 50
 
@@ -32,6 +30,8 @@ def my_function(difficulty):
     print(storednum)
     print("Number guessing game --:--\n")
 
+    num1 = 1    
+    num2 = max_num
     guesses = 1
     if difficulty == "easy":
         selective_attempts = 10
@@ -94,8 +94,6 @@ def my_function(difficulty):
             print("you are warm !")
         elif difference <= selective_cold:
             print("you are cold !")
-        num1 = 0
-        num2 = max_num
 
         if askguess > storednum:
             print("Go Lower !")
@@ -152,4 +150,4 @@ def my_function(difficulty):
         print("Number of guesses are :", guesses)
 
 
-my_function(difficulty=difficulty)
+my_function(difficulty=difficulty,)
