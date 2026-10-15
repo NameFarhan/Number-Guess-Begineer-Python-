@@ -30,7 +30,8 @@ def my_function(difficulty):
     print(storednum)
     print("Number guessing game --:--\n")
 
-    num1 = 1    
+    score = 1
+    num1 = 1
     num2 = max_num
     guesses = 1
     if difficulty == "easy":
@@ -105,6 +106,7 @@ def my_function(difficulty):
         print(f"Range is {num1} and {num2}")
         attempts -= 1
         guesses += 1
+        score += 1
         print("remaining attempts are: ", attempts)
 
         insidevalid = False
@@ -139,15 +141,26 @@ def my_function(difficulty):
                 print("Please enter a valid number!")
                 insidevalid = False
                 print("remaining attempts are: ", attempts)
-
         if attempts == 1:
             print("Game Over! Attempts Finished")
+            print("Your score is: ", score)
             print("The secret number is:", storednum)
             break
 
     else:
+        if guesses >= 1 and guesses <= 2 and askguess == storednum:
+            score += 99
+        elif guesses >= 3 and guesses <= 4 and askguess == storednum:
+            score += 79
+        elif guesses >= 5 and guesses <= 6 and askguess == storednum:
+            score += 59
+        elif guesses >= 7 and guesses <= 8 and askguess == storednum:
+            score += 29
         print("You won the game !!")
+        print("Your score is: ", score)
         print("Number of guesses are :", guesses)
 
 
-my_function(difficulty=difficulty,)
+my_function(
+    difficulty=difficulty,
+)
