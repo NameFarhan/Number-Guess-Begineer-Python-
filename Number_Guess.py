@@ -2,21 +2,23 @@
 
 import random
 
-print("Easy")
-print("Medium")
-print("Hard")
 
-difficulty_valid = True
-while difficulty_valid == True:
+
+def my_function():
+
+
+ print("Easy")
+ print("Medium")
+ print("Hard")
+
+ difficulty_valid = True
+ while difficulty_valid == True:
     difficulty = input("Enter the diffculty :-").lower()
     if difficulty == "easy" or difficulty == "medium" or difficulty == "hard":
         difficulty_valid = False
     else:
         print("Please enter from the above !")
         continue
-
-
-def my_function(difficulty):
     if difficulty == "easy":
         max_num = 50
 
@@ -154,13 +156,19 @@ def my_function(difficulty):
             score += 79
         elif guesses >= 5 and guesses <= 6 and askguess == storednum:
             score += 59
-        elif guesses >= 7 and guesses <= 8 and askguess == storednum:
+        elif guesses >= 7 and guesses <= 8 and askguess == storednum:   
             score += 29
         print("You won the game !!")
         print("Your score is: ", score)
         print("Number of guesses are :", guesses)
+        ask_game = input("want to play another game ? \nYes/No  ").lower()
+        if ask_game == "yes":
+            print("")
+            print("")
+            my_function()
+        else:
+            print("")
+            print("")
+            print("Okay come tomorrow !")    
 
-
-my_function(
-    difficulty=difficulty,
-)
+my_function()
