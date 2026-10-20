@@ -161,14 +161,5 @@ def my_function():
         print("You won the game !!")
         print("Your score is: ", score)
         print("Number of guesses are :", guesses)
-        ask_game = input("want to play another game ? \nYes/No  ").lower()
-        if ask_game == "yes":
-            print("")
-            print("")
-            my_function()
-        else:
-            print("")
-            print("")
-            print("Okay come tomorrow !")    
 
 my_function()
