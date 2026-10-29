@@ -1,5 +1,6 @@
 # Number guessing game :-
 
+
 import random
 
 
@@ -22,7 +23,7 @@ def my_function():
     if difficulty == "easy":
         max_num = 50
 
-    elif difficulty == "medium":
+    elif difficulty == "medium":    
         max_num = 100
 
     elif difficulty == "hard":
@@ -108,7 +109,6 @@ def my_function():
         print(f"Range is {num1} and {num2}")
         attempts -= 1
         guesses += 1
-        score += 1
         print("remaining attempts are: ", attempts)
 
         insidevalid = False
@@ -163,3 +163,4 @@ def my_function():
         print("Number of guesses are :", guesses)
 
 my_function()
+
