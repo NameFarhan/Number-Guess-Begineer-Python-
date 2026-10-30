@@ -6,8 +6,9 @@ import random
 
 game_loss = 0
 game_wins = 0
+games_played = 0
 
-def my_function(game_loss,game_wins):
+def my_function(game_loss,game_wins,games_played):
 
     print("Easy")
     print("Medium")
@@ -149,18 +150,20 @@ def my_function(game_loss,game_wins):
                 print("Your score is: ", score)
                 print("The secret number is:", storednum)
                 game_loss += 1
+                games_played += 1
                 def new_game():
                     new_game_valid = True
                     while new_game_valid == True:
                         ask_game = input("Want to play another game Y/N  ").lower()
                         if ask_game == "yes" or ask_game == "y":
-                            my_function(game_loss,game_wins)
+                            my_function(game_loss,game_wins,games_played)
                             break
                         elif ask_game == "no" or ask_game == "n":
                             print("")
                             print("Thanks for playing the game !")
                             print("Your number of games win are:-- ", game_wins)
                             print("Your number of games lost are:-- ", game_loss)
+                            print("Number of games played are:--  ", games_played)
                             new_game_valid == False
                             break
                         else:
@@ -180,19 +183,21 @@ def my_function(game_loss,game_wins):
             print("Your score is: ", score)
             print("Number of guesses are :", guesses)
             game_wins += 1
+            games_played += 1
 
             def new_game():
                 new_game_valid = True
                 while new_game_valid == True:
                     ask_game = input("Want to play another game Y/N  ").lower()
                     if ask_game == "yes" or ask_game == "y":
-                        my_function(game_loss,game_wins)
+                        my_function(game_loss,game_wins,games_played)
                         break
                     elif ask_game == "no" or ask_game == "n":
                         print("")
                         print("Thanks for playing the game !")
                         print("Your number of games win are:-- ", game_wins)
                         print("Your number of games lost are:-- ", game_loss)
+                        print("Number of games played are :--  ", games_played)
                         new_game_valid == False
                         break
                     else:
@@ -201,4 +206,4 @@ def my_function(game_loss,game_wins):
             new_game()
 
 
-my_function(game_loss = game_loss,game_wins =game_wins)
+my_function(game_loss = game_loss,game_wins =game_wins,games_played = games_played)
